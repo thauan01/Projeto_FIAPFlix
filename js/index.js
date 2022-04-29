@@ -20,4 +20,22 @@ for (i; i < listaDeFilmes.length; i++){
     </div>`
 }
 
+let filmeRepetido = true
+
+function Cadastrar(){
+    let novofilme = document.querySelector('#filme').value
+
+    let novotitulo = document.querySelector('#titulo').value
+
+    if (listaDeFilmes.includes(novofilme) || listaDeTitulos.toLowerCase().includes(novotitulo.toLowerCase())){
+        erro.innerHTML = `Filme ${novotitulo} já cadastrado!`
+    }else{
+        listaDeFilmes.push(novofilme)
+        listaDeTitulos.push(novotitulo)
+        erro.innerHTML = ''
+        // Função para mostrar os filmes
+    }
+    document.querySelector('#filme').value = ''
+    document.querySelector('#titulo').value = ''
+}
 
