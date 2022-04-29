@@ -6,3 +6,8 @@ let listaDeTitulos = [
     'Interestelar',
     'Efeito Borboleta'
 ]
+
+//! DOM - Document Object Model
+let catalogo = document.querySelector('#catalogo')
+let i = 0
+let erro = document.querySelector('#erro')
